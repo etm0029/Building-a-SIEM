@@ -27,20 +27,27 @@ First, I set up a Windows 10 Pro Virtual Machine using Microsoft Azure. I intent
 
 Next, I created a Log Analytics workspace on Azure and deployed Microsoft Sentinel onto my workspace. Now, I have a workspace where I can pull event logs from my VM and then display them in a structured interface using Sentinel.
 
-add image here
+*Ref 2: SIEM Dashboard*
+
+<img width="800" alt="Screenshot 2025-01-18 at 2 23 09 PM" src="https://github.com/user-attachments/assets/c3131dbc-2c06-4276-a7e8-d9cb3ae39d02" />
 
 Next, I set up a data connector, which I would use to pull event logs from my VM and send them to my Log Analytics Workspace. I used the Windows Security Events data connector for my purposes.
 
-*Ref 2: Data Connector Setup*
+*Ref 3: Data Connector Setup*
 
 <img width="800" alt="Screenshot 2025-01-17 at 6 59 24 PM" src="https://github.com/user-attachments/assets/91966c67-2a29-4278-a0a6-94b951dfb5d9" />
 
-Next, I created a query rule using KQL to check our event logs for successful sign-ins via RDP to our VM. This way, if our VM is attacked via RDP, we will be alerted on our SIEM. I set this to query every 5 minutes so we are always updated.
+Next, I created a query rule using KQL to check our event logs for successful sign-ins via RDP to our VM. This way, if our VM is attacked via RDP, we will be alerted on our SIEM. I set this to query every 5 minutes so we are always updated. I also added some other built-in rules.
 
-*Ref 3: Query Rule*
+*Ref 4: Query Rule*
 
 <img width="800" alt="Screenshot 2025-01-17 at 7 04 13 PM" src="https://github.com/user-attachments/assets/1047c0ac-a436-4afb-8981-0f84bed98900" />
 
-After waiting I day i found this
+I let the machine run for a day, and when I checked it, my SIEM had logged over 4,000 security events, including 4 incidents of successful log-ins to my VM.
+
+*Ref 5: SIEM Dashboard after 1 day*
+
+<img width="1459" alt="Screenshot 2025-01-18 at 2 16 46 PM" src="https://github.com/user-attachments/assets/cdcbe825-e07c-4001-a143-691a2469e09b" />
+
 
 
