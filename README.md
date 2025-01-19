@@ -43,11 +43,11 @@ Next, I created a query rule using KQL to check our event logs for successful si
 
 <img width="800" alt="Screenshot 2025-01-17 at 7 04 13 PM" src="https://github.com/user-attachments/assets/1047c0ac-a436-4afb-8981-0f84bed98900" />
 
-I let the machine run for a day, and when I checked it, my SIEM had logged over 4,000 security events, including 4 incidents of successful log-ins to my VM.
+I let the machine run for a few day, and when I checked it, my SIEM had logged over 30,000 security events, including several incidents of successful log-ins and other alerts.
 
-*Ref 5: SIEM Dashboard after 1 day*
+*Ref 5: SIEM Dashboard after 2 days*
 
-<img width="1459" alt="Screenshot 2025-01-18 at 2 16 46 PM" src="https://github.com/user-attachments/assets/cdcbe825-e07c-4001-a143-691a2469e09b" />
+<img width="800" alt="Screenshot 2025-01-19 at 3 07 32 PM" src="https://github.com/user-attachments/assets/2857c882-67b3-4752-8238-4ba1f35b7540" />
 
 
 
