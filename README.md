@@ -10,7 +10,7 @@ The SIEM Building project aimed to create and configure a central platform to lo
 - Real-time monitoring of events for anomolies or potential security incidents.
 - Configuring data connectors to send data and event logs from VM to Log Analytics Workspace to SIEM for efficient event monitoring
 - Creating query rules to specify what type of security events we want to be alerted of using KQL.
-- Setting up a honeypot VM to collect data from outside sources.
+- Configuring VM firewall to allow traffic from more sources to generate more telemetry for testing purposes.
 
 ### Tools Used
 
@@ -43,11 +43,11 @@ Next, I created a query rule using KQL to check our event logs for successful si
 
 <img width="800" alt="Screenshot 2025-01-17 at 7 04 13 PM" src="https://github.com/user-attachments/assets/1047c0ac-a436-4afb-8981-0f84bed98900" />
 
-I let the machine run for a few day, and when I checked it, my SIEM had logged over 30,000 security events, including several incidents of successful log-ins and other alerts.
+I let the machine run for a few day, and when I checked it, my SIEM had logged over 80,000 security events, including several incidents of successful log-ins and other alerts. I also logged the attackers' IP addresses, detecting attacks from countries such as Russia, India, and the Netherlands.
 
 *Ref 5: SIEM Dashboard after 2 days*
 
-<img width="800" alt="Screenshot 2025-01-19 at 3 07 32 PM" src="https://github.com/user-attachments/assets/2857c882-67b3-4752-8238-4ba1f35b7540" />
+<img width="800" alt="Screenshot 2025-01-20 at 1 26 56 AM" src="https://github.com/user-attachments/assets/e13ba04e-8c8f-4062-a42f-3ef86ec1e0f0" />
 
 
 
